@@ -1,81 +1,37 @@
-# Advanced ESP32 Engineering Index
+# Awesome ESP32 Projects
 
-A rigorously curated collection of advanced firmware, high-performance embedded systems, software-defined radio stacks, flight controllers, and edge intelligence projects developed for the ESP32 and ESP32-S series microcontrollers.
+Here is a chilled list of some of the wildest, most creative, and most interesting open-source projects built with the ESP32. No corporate fluff, just cool stuff people built.
 
----
+## Radio & Signal Stuff (SDR)
+- [ESPARGOS/esp-sdr](https://github.com/ESPARGOS/esp-sdr) - Turns regular ESP32 chips into low-duty software-defined radios using undocumented raw I/Q capture.
+- [hardcoreerik/OrcSDR](https://github.com/hardcoreerik/OrcSDR) - Portable touchscreen SDR setup using M5Stack and RTL-SDR for looking at waterfalls and spectrums.
+- [jochenhammes/esp32-sdr-trx](https://github.com/jochenhammes/esp32-sdr-trx) - Software-defined transceiver running entirely on an ESP32-S3.
+- [cifertech/Fennec](https://github.com/cifertech/Fennec) - Handheld AM, FM, and shortwave radio receiver using ESP32-S3 and an SI4732 chip.
 
-## Table of Contents
-1. [Software Defined Radio & RF Signal Processing](#software-defined-radio--rf-signal-processing)
-2. [Flight Controllers, Drones & Airspace Defense](#flight-controllers-drones--airspace-defense)
-3. [RF Security & Network Intelligence](#rf-security--network-intelligence)
-4. [Edge Computing, Computer Vision & AI](#edge-computing-computer-vision--ai)
-5. [Retro Computing & Hardware Emulation](#retro-computing--hardware-emulation)
-6. [Industrial Automation & Embedded RTOs](#industrial-automation--embedded-rtos)
+## Drones & Flying Things
+- [ExpressLRS/ExpressLRS](https://github.com/ExpressLRS/ExpressLRS) - The go-to high-performance open-source radio control link used by drone pilots everywhere.
+- [espressif/esp-drone](https://github.com/espressif/esp-drone) - Espressif's official mini quadcopter flight controller firmware for ESP32 boards.
+- [DroneBridge/ESP32](https://github.com/DroneBridge/ESP32) - Secure telemetry and video link over Wi-Fi and ESP-NOW for drones.
+- [batear-io/batear](https://github.com/batear-io/batear) - Low-cost acoustic drone detector that listens to propeller sounds with a mic instead of tracking radio signals.
 
----
+## WiFi, Bluetooth & Security Stuff
+- [ruvnet/RuView](https://github.com/ruvnet/RuView) - Uses everyday Wi-Fi signals for spatial intelligence and presence tracking without cameras.
+- [justcallmekoko/ESP32Marauder](https://github.com/justcallmekoko/ESP32Marauder) - The classic all-in-one Wi-Fi and Bluetooth testing tool for ESP32.
+- [EmenstaNougat/ESP32-BlueJammer](https://github.com/EmenstaNougat/ESP32-BlueJammer) - 2.4GHz interference tool for testing how devices handle signal noise.
+- [meshtastic/firmware](https://github.com/meshtastic/firmware) - Off-grid, encrypted mesh communication system running on LoRa and ESP32.
+- [cyberman54/ESP32-Paxcounter](https://github.com/cyberman54/ESP32-Paxcounter) - Counts people by sniffing Wi-Fi and Bluetooth probe requests anonymously.
 
-## Software Defined Radio & RF Signal Processing
+## AI & Robots
+- [78/xiaozhi-esp32](https://github.com/78/xiaozhi-esp32) - An MCP-based voice chatbot client running on ESP32.
+- [espressif/esp-who](https://github.com/espressif/esp-who) - Face detection and recognition setup for ESP32-CAM modules.
+- [makerspet/oomwoo](https://github.com/makerspet/oomwoo) - Open-source robotic vacuum cleaner built around microcontroller hardware.
 
-| Repository | Technical Description |
-| :--- | :--- |
-| [ESPARGOS/esp-sdr](https://github.com/ESPARGOS/esp-sdr) | Exploits undocumented raw I/Q capture capabilities of ESP32 SoCs to implement low-duty-cycle Software Defined Radio. |
-| [hardcoreerik/OrcSDR](https://github.com/hardcoreerik/OrcSDR) | Portable touchscreen SDR workstation interfacing with RTL-SDR hardware for spectrum and waterfall analysis. |
-| [jochenhammes/esp32-sdr-trx](https://github.com/jochenhammes/esp32-sdr-trx) | Software-defined transceiver running entirely on an ESP32-S3 board with rtl_tcp streaming support. |
-| [cifertech/Fennec](https://github.com/cifertech/Fennec) | Handheld AM/FM/SW receiver utilizing ESP32-S3 and SI4732 with SSTV decoding and web-based telemetry. |
-| [ESPARGOS/SoapyESPSDR](https://github.com/ESPARGOS/SoapyESPSDR) | SoapySDR hardware plugin streaming raw I/Q samples from ESP32-S3 over USB/Ethernet to host SDR suites. |
+## Gaming & Retro Emulators
+- [ducalex/retro-go](https://github.com/ducalex/retro-go) - Retro console emulator firmware for playing GameBoy and NES on ESP32 handhelds.
+- [dcrespo3d/espectrum](https://github.com/dcrespo3d/espectrum) - ZX Spectrum emulator that hooks up to VGA or HDMI displays via ESP32.
+- [bitluni/ESP32Lib](https://github.com/bitluni/ESP32Lib) - Bitluni's legendary composite video and audio generation library for ESP32.
 
----
-
-## Flight Controllers, Drones & Airspace Defense
-
-| Repository | Technical Description |
-| :--- | :--- |
-| [ExpressLRS/ExpressLRS](https://github.com/ExpressLRS/ExpressLRS) | High-performance open-source radio control link firmware utilizing ESP series chips for long-range RC telemetry. |
-| [espressif/esp-drone](https://github.com/espressif/esp-drone) | Official quadcopter and mini-drone flight controller firmware optimized for ESP32 and ESP32-S architecture. |
-| [DroneBridge/ESP32](https://github.com/DroneBridge/ESP32) | Secure, transparent telemetry and video link utilizing Wi-Fi and ESP-NOW supporting MAVLink and MSP protocols. |
-| [batear-io/batear](https://github.com/batear-io/batear) | Off-grid acoustic drone detection system performing real-time edge computing on microphone inputs to detect FPV signatures. |
-| [qqqlab/madflight](https://github.com/qqqlab/madflight) | High-performance multi-platform flight controller firmware supporting ESP32, STM32, and RP2040. |
-
----
-
-## RF Security & Network Intelligence
-
-| Repository | Technical Description |
-| :--- | :--- |
-| [ruvnet/RuView](https://github.com/ruvnet/RuView) | Real-time spatial intelligence and vital sign monitoring derived from commodity Wi-Fi propagation signals. |
-| [justcallmekoko/ESP32Marauder](https://github.com/justcallmekoko/ESP32Marauder) | Comprehensive suite of offensive and defensive Wi-Fi and Bluetooth analysis tools for ESP32 hardware. |
-| [EmenstaNougat/ESP32-BlueJammer](https://github.com/EmenstaNougat/ESP32-BlueJammer) | 2.4GHz RF interference and packet generation tool targeting Wi-Fi and BLE protocols. |
-| [meshtastic/firmware](https://github.com/meshtastic/firmware) | Decentralized, off-grid encrypted mesh communication firmware designed for LoRa and ESP32 nodes. |
-| [cyberman54/ESP32-Paxcounter](https://github.com/cyberman54/ESP32-Paxcounter) | GDPR-compliant Wi-Fi and BLE probe request monitor for real-time crowd density measurement. |
-
----
-
-## Edge Computing, Computer Vision & AI
-
-| Repository | Technical Description |
-| :--- | :--- |
-| [78/xiaozhi-esp32](https://github.com/78/xiaozhi-esp32) | Model Context Protocol (MCP) based voice-activated AI chatbot client implementation for embedded hardware. |
-| [espressif/esp-who](https://github.com/espressif/esp-who) | Image processing, face detection, and facial recognition platform optimized for ESP32-CAM modules. |
-| [espressif/esp-box](https://github.com/espressif/esp-box) | Voice recognition development kit firmware supporting offline speech commands and audio pipelines. |
-| [makerspet/oomwoo](https://github.com/makerspet/oomwoo) | Open-source autonomous vacuum cleaner firmware implemented on ESP32 microcontrollers. |
-
----
-
-## Retro Computing & Hardware Emulation
-
-| Repository | Technical Description |
-| :--- | :--- |
-| [ducalex/retro-go](https://github.com/ducalex/retro-go) | Multi-console retro gaming framework and emulator frontend for ESP32 and ESP32-S3. |
-| [dcrespo3d/espectrum](https://github.com/dcrespo3d/espectrum) | ZX Spectrum 48k/128k hardware emulator featuring video output adapters for ESP32. |
-| [bitluni/ESP32Lib](https://github.com/bitluni/ESP32Lib) | Low-level graphics generation, composite video signal synthesis, and audio DAC libraries. |
-
----
-
-## Industrial Automation & Embedded RTOs
-
-| Repository | Technical Description |
-| :--- | :--- |
-| [wled/WLED](https://github.com/wled/WLED) | Real-time TCP/IP controlled digital RGB LED lighting daemon with extensive API integrations. |
-| [esphome/esphome](https://github.com/esphome/esphome) | Declarative configuration framework for building custom local automation nodes for Home Assistant. |
-| [arendst/Tasmota](https://github.com/arendst/Tasmota) | Modular local control firmware providing MQTT and HTTP REST interfaces for ESP devices. |
-| [technoblogy/ulisp-esp](https://github.com/technoblogy/ulisp-esp) | Compact Lisp interpreter compiled to run directly on bare-metal microcontroller memory. |
+## Lighting, Smart Home & Languages
+- [wled/WLED](https://github.com/wled/WLED) - The absolute best firmware for controlling WS2812B LED strips over Wi-Fi.
+- [esphome/esphome](https://github.com/esphome/esphome) - YAML-based custom firmware builder for integrating ESP32 boards into Home Assistant.
+- [technoblogy/ulisp-esp](https://github.com/technoblogy/ulisp-esp) - A Lisp interpreter that runs right on the bare metal of an ESP32.
